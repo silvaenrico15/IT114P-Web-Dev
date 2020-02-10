@@ -1,0 +1,21 @@
+{
+  "name": "incomplete-web-dev",
+  "version": "1.0.0",
+  "description": "IT114P",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "enrico t. silva jr",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.8.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
