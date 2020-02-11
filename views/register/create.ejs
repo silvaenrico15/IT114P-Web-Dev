@@ -1,0 +1,46 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <section class="section">
+        <div class="columns is-centered">
+            <div class="column is-one-third">
+               <nav class="panel">
+                <p class="panel-heading">
+                  Register
+                </p>
+                    <form class="product-form" action="/register" method="POST">
+                        <div class="panel-block">
+                            <div class="field">
+                                <label class="label">Student Number</label>
+                                    <div class="control">
+                                        <input class="input" name="id" type="text" required>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="panel-block">
+                            <div class="field">
+                                <label class="label">Email</label>
+                                    <div class="control">
+                                        <input class="input" type="email" name="email"required>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel-block">
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-link" type="submit" required>Register</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </nav>
+            </div>
+        </div>           
+    </section>
+    <%- include('../includes/scripts.ejs') %>
+</body>
+
+</html>
