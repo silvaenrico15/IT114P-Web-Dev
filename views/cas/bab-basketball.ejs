@@ -1,0 +1,110 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+  <%- include('../includes/nav.ejs') %>
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <nav class="panel">
+          <p class="panel-heading">
+            College of Arts and Science
+          </p>
+          <div class="panel-block">
+            <div class="field">
+              <div class="tabs is-toggle">
+                <ul>
+                  <li>
+                    <a href="/cas/home">
+                      <span class="icon is-small"><i class="mdi mdi-24px mdi-notification-clear-all"
+                          aria-hidden="true"></i></span>
+                      <span>ALL</span>
+                    </a>
+                  </li>
+                  <li class="is-active">
+                    <a href="/cas/BAB">
+                      <span class="icon is-small"><i class="mdi mdi-24px mdi-microphone-variant"
+                          aria-hidden="true"></i></span>
+                      <span>BAB</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cas/MMA">
+                      <span class="icon is-small"><i class="mdi mdi-24px mdi-camera" aria-hidden="true"></i></span>
+                      <span>MMA</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel-block">
+            <div class="field">
+              <div class="tabs is-toggle">
+                <ul>
+                  <li>
+                    <a href="/cas/BAB/badminton">
+                      <span class="icon is-small"><i class="mdi mdi-24px mdi-badminton" aria-hidden="true"></i></span>
+                      <span>Badminton</span>
+                    </a>
+                  </li>
+                  <li class="is-active">
+                    <a href="/cas/BAB/basketball">
+                      <span class="icon is-small"><i class="mdi mdi-24px mdi-basketball" aria-hidden="true"></i></span>
+                      <span>Basketball</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/cas/BAB/volleyball"><span class="icon is-small"><i class="mdi mdi-24px mdi-volleyball"
+                          aria-hidden="true"></i></span>
+                      <span>Volleyball</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel-block">
+            <div class="field">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th><abbr title="id">Student Number</abbr></th>
+                    <th><abbr title="program">Program</abbr></th>
+                    <th><abbr title="Sport">Sport</abbr></th>
+                    <th><abbr title="fullname">Full Name</abbr></th>
+                  </tr>
+                </thead>
+                <% if (register.length > 0) { %>
+                <% for (let player of register) { %>
+                <tbody>
+
+                  <tr>
+                    <td><%=player.id%></td>
+                    <td><%=player.program%></td>
+                    <td><%=player.sport%></td>
+                    <td><%=player.fullname%></td>
+                    <td><%=player.email%></td>
+                  </tr>
+                </tbody>
+
+
+                <% } %>
+                <% } else { %>
+
+                <% } %>
+              </table>
+
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+  <%- include('../includes/scripts.ejs') %>
+</body>
+
+</html>

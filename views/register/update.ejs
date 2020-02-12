@@ -14,6 +14,31 @@
                                 <input hidden value="<%=player.id%>" name="id">            
                                 <div class="panel-block">
                                     <div class="field">
+                                        <label class="label">College</label>
+                                            <div class="select">
+                                                <select name="college" id="collegeid" required>
+                                                    <option value=""><%=player.college%></option>
+                                                    <option value="CAS">CAS</option>
+                                                    <option value="CCIS">CCIS</option>
+                                                    <option value="CMET">CMET</option>
+                                                    <option value="ETYCB">ETYCB</option>
+                                                    <option value="MITL">MITL</option>
+                                                    <option value="SHS">SHS</option>
+                                                </select>
+                                            </div>                
+                                    </div>
+                                </div>       
+                                <div class="panel-block">
+                                        <div class="field">
+                                            <label class="label">Program</label>
+                                                <p class="subtitle is-7">e.g. IT CS</p>
+                                                    <div class="control">
+                                                        <input class="input" type="text" value="<%=player.program%>" name="program"required>
+                                                    </div>
+                                        </div>
+                                </div>
+                                <div class="panel-block">
+                                    <div class="field">
                                         <label class="label">Sport</label>
                                             <div class="select">
                                                 <select name="sport" required>

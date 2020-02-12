@@ -12,24 +12,40 @@
                 <a class="navbar-item <%= path === 'home' ? 'is-active' : '' %>" href="/home/page">
                   <i class="mdi mdi-24px mdi-school"></i>Home
               </a>
-                <a class="navbar-item <%= path === '/' ? 'is-active' : '' %>" href="/">
-                    <i class="mdi mdi-24px mdi-account"></i>Students
-                </a>
+                      <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                          College
+                        </a>
                 
+                        <div class="navbar-dropdown">
+                          <a class="navbar-item" href="/cas/home">
+                            CAS
+                          </a>
+                          <a class="navbar-item" href="/ccis/home">
+                            CCIS
+                          </a>
+                          <a class="navbar-item" href="/cmet/home">
+                            CMET
+                          </a>
+                          <a class="navbar-item" href="/etycb/home">
+                            ETYCB
+                          </a>
+                          <a class="navbar-item" href="/mitl/home">
+                            MITL
+                          </a>
+                          <a class="navbar-item" href="/shs/home">
+                            SHS
+                          </a>
+                        </div>
+                      </div>
             </div>
         </div>
-
         <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
-                    <a class="button is-primary" href="/register">
-                        <i class="mdi mdi-24px mdi-account-plus"></i>Register
-                    </a>
-                </p>
-                <p class="control">
                     <a class="button is-primary" href="/login">
-                        <i class="mdi mdi-24px mdi-account-plus"></i>Login
+                        <i class="mdi mdi-24px mdi-account-plus"></i> Register
                     </a>
                 </p>
               </div>
