@@ -23,3 +23,76 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
   });
+  $(document).ready(function () {
+ 
+    var list1 = document.getElementById('college');
+     
+    list1.options[0] = new Option('', '');
+    list1.options[1] = new Option('CAS', 'CAS');
+    list1.options[2] = new Option('CCIS', 'CCIS');
+    list1.options[1] = new Option('CMET', 'CMET');
+    list1.options[2] = new Option('ETYCB', 'ETYCB');
+    list1.options[1] = new Option('MITL', 'MITL');
+    list1.options[2] = new Option('SHS', 'SHS');
+    });
+
+    function getProgram(){
+ 
+      var list1 = document.getElementById('college');
+      var list2 = document.getElementById("program");
+      var list1SelectedValue = list1.options[list1.selectedIndex].value;
+       
+      if (list1SelectedValue=='CAS')
+      {
+           
+          list2.options.length=0;
+          list2.options[0] = new Option('', '');
+          list2.options[1] = new Option('BAB', 'BAB');
+          list2.options[2] = new Option('MMA', 'MMA');    
+      }
+      else if (list1SelectedValue=='CCIS')
+      {
+           
+          list2.options.length=0;
+          list2.options[0] = new Option('', '');
+          list2.options[1] = new Option('CS', 'CS');
+          list2.options[2] = new Option('IT', 'IT');
+           
+      }
+      else if (list1SelectedValue=='CMET')
+      {
+           
+          list2.options.length=0;
+          list2.options[0] = new Option('', '');
+          list2.options[1] = new Option('ME', 'ME');
+          list2.options[2] = new Option('MT', 'MT');
+           
+      }
+      else if (list1SelectedValue=='ETYCB')
+      {
+           
+          list2.options.length=0;
+          list2.options[0] = new Option('', '');
+          list2.options[1] = new Option('ENT', 'ENT');
+          list2.options[2] = new Option('HRM', 'HRM');
+           
+      }
+      else if (list1SelectedValue=='MITL')
+      {
+           
+          list2.options.length=0;
+          list2.options[0] = new Option('', '');
+          list2.options[1] = new Option('CPE', 'CPE');
+          list2.options[2] = new Option('ECE', 'ECE');
+           
+      }
+      else if (list1SelectedValue=='SHS')
+      {
+           
+          list2.options.length=0;
+          list2.options[0] = new Option('', '');
+          list2.options[1] = new Option('AT', 'AT');
+          list2.options[2] = new Option('TVLT', 'TVLT');
+           
+      }
+}

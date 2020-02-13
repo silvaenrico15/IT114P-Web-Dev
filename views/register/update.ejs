@@ -16,7 +16,7 @@
                                     <div class="field">
                                         <label class="label">College</label>
                                             <div class="select">
-                                                <select name="college" id="collegeid" required>
+                                                <select name="college" id="college" onClick="getProgram()" required>
                                                     <option value=""><%=player.college%></option>
                                                     <option value="CAS">CAS</option>
                                                     <option value="CCIS">CCIS</option>
@@ -31,10 +31,10 @@
                                 <div class="panel-block">
                                         <div class="field">
                                             <label class="label">Program</label>
-                                                <p class="subtitle is-7">e.g. IT CS</p>
-                                                    <div class="control">
-                                                        <input class="input" type="text" value="<%=player.program%>" name="program"required>
-                                                    </div>
+                                            <div class="select">
+                                                <select name="program" id="program" required>
+                                                </select>
+                                            </div>         
                                         </div>
                                 </div>
                                 <div class="panel-block">

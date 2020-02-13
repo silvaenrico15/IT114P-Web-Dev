@@ -68,7 +68,7 @@ exports.postUpdateRegister = (req, res) => {
   register
     .update()
     .then(() => {
-      res.redirect('/');
+      res.redirect('/login');
     })
     .catch(err => console.log(err));
 };
@@ -133,7 +133,7 @@ exports.postLoginRegister = (req, res) => {
   register
     .update()
     .then(() => {
-      res.redirect('/homepage');
+      res.redirect('/');
     })
     .catch(err => console.log(err));
 };
