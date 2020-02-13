@@ -1,0 +1,77 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+  <%- include('../includes/nav2.ejs') %>
+
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <nav class="panel">
+          <p class="panel-heading">
+            Students
+          </p>
+          <div class="panel-block">
+            <div class="field">
+              <div class="tabs is-toggle">
+                <ul>
+                  <li><a href="/">ALL</a></li>
+                  <li class="is-active"><a href="/cas">CAS</a></li>
+                  <li><a href="/ccis">CCIS</a></li>
+                  <li><a href="/cmet">CMET</a></li>
+                  <li><a href="/etycb">ETYCB</a></li>
+                  <li><a href="/mitl">MITL</a></li>
+                  <li><a href="/shs">SHS</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel-block">
+            <div class="field">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th><abbr title="id">Student Number</abbr></th>
+                    <th><abbr title="program">Program</abbr></th>
+                    <th><abbr title="sport">Sport</abbr></th>
+                    <th><abbr title="fullname">Full Name</abbr></th>
+                    <th><abbr title="email">Email</abbr></th>
+                  </tr>
+                </thead>
+                <% if (register.length > 0) { %>
+                <% for (let player of register) { %>
+                <tbody>
+
+                  <tr>
+                    <th><%=player.id%></th>
+                    <td><%=player.program%></td>
+                    <td><%=player.sport%></td>
+                    <td><%=player.fullname%></td>
+                    <td><%=player.email%></td>
+                    <td><a href="/register/<%=player.id%>/update"><i class="mdi mdi-24px mdi-lead-pencil"></i></a><a
+                        href="/<%=player.id%>"><i class="mdi mdi-24px mdi-trash-can-outline"></i></a></td>
+
+                  </tr>
+
+                </tbody>
+
+
+                <% } %>
+                <% } else { %>
+
+                <% } %>
+              </table>
+
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+  <%- include('../includes/scripts.ejs') %>
+</body>
+
+</html>

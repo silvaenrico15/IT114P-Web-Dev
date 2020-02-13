@@ -1,5 +1,6 @@
 const db = require('../util/database');
 
+
 module.exports = class Register {
     constructor(id, college, program, sport, fullname, email) {
         this.id = id;
@@ -11,6 +12,13 @@ module.exports = class Register {
     }
 
 
+    save()
+    {
+       return db.execute(
+           'INSERT INTO registers (id, email) VALUES (?, ?)',
+           [this.id, this.email]
+         );
+   }
     update() {
         return db.execute('UPDATE registers SET sport = ?, program =?, college =?, fullname = ?, email = ? WHERE id = ?',
           [this.sport, this.program, this.college, this.fullname, this.email,  this.id,]);
@@ -254,4 +262,5 @@ module.exports = class Register {
     static findById(id) {
         return db.execute('SELECT * FROM registers WHERE id = ?', [id]);
     }
+
 }

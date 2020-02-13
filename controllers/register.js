@@ -13,10 +13,14 @@ exports.postAddRegister = (req, res, next) =>
   const
   {
     id,
-    email
+    email,
+    college,
+    program,
+    sport,
+    fullname,
   } = req.body;
 
- const register = new Register(id, email);
+ const register = new Register(id,college,program,sport,fullname, email);
   console.log(register);
   register
     .save()
@@ -97,10 +101,8 @@ exports.getLoginPage = (req, res, next) => {
     path: 'Login'
   });
 };
-
 exports.postAddStudent = (req, res, next) => 
 {
-
 
   var id = req.body.id; 
   
@@ -960,6 +962,68 @@ exports.getTVLTVolleyball = (req, res, next) => {
         register: rows,
         pageTitle: 'TVLT Volleyball',
         path: 'shs'
+      });
+    })
+    .catch(err => console.log(err));
+};
+exports.getRegisterCAS = (req, res, next) => {
+  Register.fetchAllCAS()
+    .then(([rows, fieldData]) => {
+      res.render('register/cas', {
+        register: rows,
+        pageTitle: 'All CAS Students',
+        path: ''
+      });
+    })
+    .catch(err => console.log(err));
+};
+exports.getRegisterCCIS = (req, res, next) => {
+  Register.fetchAllCCIS()
+    .then(([rows, fieldData]) => {
+      res.render('register/ccis', {
+        register: rows,
+        pageTitle: 'All CCIS Students',
+        path: ''
+      });
+    })
+    .catch(err => console.log(err));
+};exports.getRegisterCMET = (req, res, next) => {
+  Register.fetchAllCMET()
+    .then(([rows, fieldData]) => {
+      res.render('register/cmet', {
+        register: rows,
+        pageTitle: 'All CMET Students',
+        path: ''
+      });
+    })
+    .catch(err => console.log(err));
+};exports.getRegisterETYCB = (req, res, next) => {
+  Register.fetchAllETYCB()
+    .then(([rows, fieldData]) => {
+      res.render('register/etycb', {
+        register: rows,
+        pageTitle: 'All etycb Students',
+        path: ''
+      });
+    })
+    .catch(err => console.log(err));
+};exports.getRegisterMITL = (req, res, next) => {
+  Register.fetchAllMITL()
+    .then(([rows, fieldData]) => {
+      res.render('register/mitl', {
+        register: rows,
+        pageTitle: 'All CAS Students',
+        path: ''
+      });
+    })
+    .catch(err => console.log(err));
+};exports.getRegisterSHS = (req, res, next) => {
+  Register.fetchAllSHS()
+    .then(([rows, fieldData]) => {
+      res.render('register/shs', {
+        register: rows,
+        pageTitle: 'All SHS Students',
+        path: ''
       });
     })
     .catch(err => console.log(err));

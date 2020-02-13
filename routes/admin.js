@@ -5,6 +5,13 @@ const playerController = require('../controllers/register');
 
 //display
 router.get('/', playerController.getRegister);
+
+router.get('/cas', playerController.getRegisterCAS);
+router.get('/ccis', playerController.getRegisterCCIS);
+router.get('/cmet', playerController.getRegisterCMET);
+router.get('/etycb', playerController.getRegisterETYCB);
+router.get('/mitl', playerController.getRegisterMITL);
+router.get('/shs', playerController.getRegisterSHS);
 //home
 router.get('/home/page', playerController.getHomePage);
 //create
