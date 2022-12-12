@@ -13,7 +13,7 @@
     "@mdi/font": "^4.9.95",
     "bulma": "^0.8.0",
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mysql2": "^2.1.0"
   },
   "devDependencies": {
